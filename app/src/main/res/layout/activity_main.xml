@@ -13,17 +13,47 @@
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-<!--    search_view-->
-    <SearchView
-        android:id="@+id/simpleSearchView"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialcardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:iconifiedByDefault="false"
-        android:queryHint="Where to?"
-        app:layout_constraintBottom_toTopOf="@id/map"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            android:background="@drawable/search_bg"
+            app:queryHint="Where To?..."
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlace"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/materialcardView"
+        app:layout_constraintStart_toStartOf="@+id/materialcardView"
+        app:layout_constraintTop_toBottomOf="@+id/materialcardView" />
+
+    <Button
+        android:id="@+id/btnSearchBus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Search Bus"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/rvPlace"
+        app:layout_constraintStart_toStartOf="@+id/rvPlace" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

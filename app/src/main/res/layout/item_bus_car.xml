@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bg"
+    android:layout_marginBottom="10dp"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/busCarId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bus ID"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/busCarPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Position"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busCarId" />
+</androidx.constraintlayout.widget.ConstraintLayout>

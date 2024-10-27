@@ -61,8 +61,14 @@ dependencies {
     implementation ("androidx.fragment:fragment:1.8.4") // Check for the latest version
     //gtfs api
 
+    implementation ("com.fasterxml.jackson.core:jackson-databind:2.13.3")
+    implementation ("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
+    implementation ("com.google.protobuf:protobuf-java-util:3.19.4")
 
+    implementation ("com.google.android.libraries.places:places:2.6.0")
 
+    implementation("com.google.maps:google-maps-services:0.18.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
